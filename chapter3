@@ -1,0 +1,199 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{setspace}
+\onehalfspacing 
+\usepackage{booktabs}
+\usepackage{titlesec}
+
+% تغيير الاسم التلقائي من Bibliography إلى References
+\renewcommand{\bibname}{References}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\huge}{\chaptername\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\selectfont\bfseries\large}{\thesection}{1em}{}
+
+\begin{document}
+
+\setcounter{chapter}{2} 
+
+% ==========================================
+% CHAPTER 3: RESEARCH METHODOLOGY
+% ==========================================
+\clearpage
+\thispagestyle{empty} 
+\vspace*{\fill}
+\begin{center}
+    {\Huge\bfseries CHAPTER 3} \\[0.5cm]
+    {\Huge\bfseries RESEARCH METHODOLOGY}
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+\chapter{Research Methodology}
+
+\section{Introduction}
+This chapter outlines the research methodology used to achieve the study’s objectives \cite{almontaser2025}. It describes the research design, the target population, the data collection instruments, and the analytical techniques employed, specifically focusing on the integration of AI/RPA and the application of the SECA method \cite{almontaser2025}.
+
+\section{Research Design}
+This study adopts a Quantitative Experimental and Analytical Design \cite{almontaser2025}. This approach is selected because the research aims to measure the impact of automation on ITIL 4 performance metrics and evaluate these metrics objectively using mathematical models (SECA) \cite{almontaser2025}.
+
+\section{Target Population and Sampling}
+The target population for this study consists of IT professionals, system administrators, and technical staff at Sana'a University \cite{almontaser2025}. A purposive sampling technique will be used to ensure that the participants have sufficient experience with IT service management and ITIL framework \cite{almontaser2025}.
+
+\section{Data Collection Instruments and Sources}
+To ensure comprehensive data for the proposed framework, two primary sources will be utilized \cite{almontaser2025}:
+\begin{itemize}
+    \item \textbf{System Logs and Datasets:} Real-time or simulated ITSM logs (e.g., incident tickets, resolution times, and system availability) to provide the raw data for the RPA and AI models \cite{almontaser2025}.
+    \item \textbf{Technical Surveys/Interviews:} Structured instruments designed for IT experts at Sana'a University to validate the importance and weights of the selected KPIs \cite{almontaser2025}.
+\end{itemize}
+
+\section{The Proposed Framework (Technical Implementation)}
+This study develops an automated governance framework consisting of three main layers \cite{almontaser2025}:
+\begin{itemize}
+    \item \textbf{Automation Layer (RPA):} Utilizing RPA tools (e.g., UiPath) to automate the extraction of performance data from ITIL service operations \cite{almontaser2025}.
+    \item \textbf{Intelligence Layer (AI):} Implementing AI models (e.g., GenAI) to classify incidents and predict performance trends based on historical data \cite{almontaser2025}.
+    \item \textbf{Analytical Layer (SECA):} Applying the Simultaneous Evaluation of Criteria and Alternatives (SECA) method to objectively calculate the weights of KPIs, minimizing human bias in performance assessment \cite{almontaser2025}.
+\end{itemize}
+
+To mathematically model the Multi-Criteria Decision-Making (MCDM) within the Analytical Layer using the SECA method, let $m$ be the number of KPI metrics (alternatives) and $n$ be the number of evaluation criteria \cite{seca_method_2021}. The normalized performance value of the $i$-th alternative under the $j$-th criterion is represented as $r_{ij}$ \cite{seca_method_2021}. The SECA technique objective functions maximize the overall performance variance while minimizing collinearity among criteria to determine the objective weights $w_j$ \cite{seca_method_2021}.
+
+The mathematical formulation for the optimization framework is defined as follows:
+\begin{equation}
+\max \quad W = \sum_{i=1}^{m} S_i
+\end{equation}
+
+Subject to the structural variance, correlation, and non-negativity constraints:
+\begin{equation}
+S_i = \sum_{j=1}^{n} w_j r_{ij} \quad \forall i
+\end{equation}
+\begin{equation}
+\sum_{j=1}^{n} w_j^2 = 1
+\end{equation}
+\begin{equation}
+w_j \ge 0 \quad \forall j
+\end{equation}
+Where $w_j$ represents the calculated objective mathematical weight of the $j$-th criterion, and $S_i$ is the final synthesized performance score of the $i$-th KPI alternative \cite{seca_method_2021}.
+
+\section{Data Analysis Procedures}
+The collected data will be analyzed using \cite{almontaser2025}:
+\begin{itemize}
+    \item \textbf{Statistical Analysis:} To compare the performance of manual vs. automated ITIL processes \cite{almontaser2025}.
+    \item \textbf{Mathematical Modeling:} The SECA algorithm will be programmed (using Python or Excel) to process the multi-criteria evaluation of IT service quality \cite{almontaser2025}.
+\end{itemize}
+
+\section{Ethical Considerations}
+The research will adhere to all ethical guidelines, ensuring the confidentiality of the university’s internal technical data and obtaining informed consent from all participants involved in the surveys or interviews \cite{almontaser2025}.
+
+\section{Data Analysis and Reproducibility Plan}
+To ensure the reliability and reproducibility of the results, the study will follow a structured analysis plan \cite{almontaser2025}:
+\begin{itemize}
+    \item \textbf{Performance Metrics:} The efficiency of the proposed framework will be measured using specific metrics such as Accuracy, F1-score (for AI classification), and Mean Time to Resolve (MTTR) for service operations \cite{almontaser2025}.
+    \item \textbf{Reproducibility Package:} All experimental settings, including the software versions (e.g., Python libraries, RPA workflows), and the fixed seeds for AI models, will be documented to allow for future audit and replication of the study \cite{almontaser2025}.
+\end{itemize}
+
+\section{Chapter Summary}
+This chapter has outlined the comprehensive methodology for developing an intelligent ITIL governance framework \cite{almontaser2025}. By combining a quantitative research design with advanced technical layers (RPA, GenAI, and SECA), the study provides a robust approach to automating and optimizing IT service performance \cite{almontaser2025}. The data collection instruments and ethical safeguards described here establish a solid foundation for the implementation and analysis phases that follow \cite{almontaser2025}.
+
+\section{Expected Outcomes} 
+The implementation of the proposed framework is expected to yield the following results \cite{almontaser2025}:
+\begin{itemize}
+    \item \textbf{Automated Data Pipeline:} A fully functional RPA workflow that extracts ITIL metrics without manual intervention \cite{almontaser2025}.
+    \item \textbf{Intelligent Incident Classification:} A GenAI-driven model capable of categorizing incidents with high accuracy, leading to better KPI reporting \cite{almontaser2025}.
+    \item \textbf{Objective Weighting System:} A validated SECA-based mathematical model that ranks KPIs based on objective criteria, reducing management bias \cite{almontaser2025}.
+    \item \textbf{Efficiency Gains:} A measurable reduction in the Mean Time to Resolve (MTTR) and an increase in service desk productivity \cite{almontaser2025}.
+\end{itemize}
+
+\section{Original Contribution} 
+This research contributes to the field of IT Governance by providing \cite{almontaser2025}:
+\begin{itemize}
+    \item \textbf{Technological Synergy:} One of the first frameworks to integrate RPA, GenAI, and the SECA method specifically for ITIL 4 KPI assessment \cite{almontaser2025}.
+    \item \textbf{Academic Localization:} Empirical evidence and a tailored model for implementing intelligent ITSM in the Yemeni higher education context, providing a benchmark for other local universities \cite{almontaser2025}.
+\end{itemize}
+
+\section{Generative AI (GenAI)}
+A branch of artificial intelligence used in this study to classify IT incidents and provide intelligent insights for decision-making \cite{almontaser2025}.
+
+\section{SECA Method}
+(Simultaneous Evaluation of Criteria and Alternatives) A multi-criteria decision-making mathematical model used to objectively weight and rank the selected KPIs \cite{almontaser2025}.
+
+% ==========================================
+% REFERENCES SECTION 
+% ==========================================
+\begin{thebibliography}{99}
+
+\bibitem{almontaser2025}
+E. A. Almontaser and N. T. Alsohybe, ``Exploring ITIL and Key Performance Indicators: A Survey Study,'' \emph{Sana'a University Journal of Applied Sciences}, 2025.
+
+\bibitem{shalabi2024}
+A. A. Shalabi, \emph{Research Methodology for Computing Students: A Practical Guide}, Faculty of Computing and IT, Sana'a University, 2024.
+
+\bibitem{cloud_retail_2025}
+``A Comprehensive Review of ITIL Frameworks for Managing Large-Scale Retail Cloud Operations,'' 2025.
+
+\bibitem{seca_method_2021}
+``Using Simultaneous Evaluation of Criteria and Alternatives (SECA),'' 2021.
+
+\bibitem{kpi_ranking_2025}
+``A New Approach for KPI Ranking and Selection in ITIL Processes,'' 2025.
+
+\bibitem{sustainable_itil_2025}
+``Sustainable Transformation of IT Service Management: A Review of the ITIL-Framework and its Alignment with Circular Economy Principles,'' 2025.
+
+\bibitem{analysis_itil_2023}
+``Analysis of Information Technology Services Using the ITIL Frameworks,'' 2023.
+
+\bibitem{quality_audit_2023}
+``Designing of a Quality Audit Methodology for IT Support Service,'' 2023.
+
+\bibitem{model_based_itil_2024}
+``Development of an ITIL 4 Implementation Framework Through Model-Based Systems Engineering Methods,'' 2024.
+
+\bibitem{audit_criteria_2021}
+``Development of a Quality Audit Criteria,'' 2021.
+
+\bibitem{rpa_itil_2023}
+``Automating ITIL Metrics with Robotic Process Automation (RPA),'' 2023.
+
+\bibitem{itsm_challenges_2025}
+``Challenges in ITSM Digital Transformation,'' 2025.
+
+\bibitem{devops_itsm_2025}
+``The Impact of DevOps in IT Service Management: A Multi-case Study,'' 2025.
+
+\bibitem{implementation_itsm_2025}
+``Implementation of IT Service Management (ITSM) in Service Level Management and Capacity and Performance Management Processes,'' 2025.
+
+\bibitem{incident_cubatel_2023}
+``Application of ITIL for the Automation of Incident Management Process at Cubatel S.A,'' 2023.
+
+\bibitem{genai_agility_2025}
+``Improving ITIL Practices Using GenAI for Agility and Decision Making,'' 2025.
+
+\bibitem{balanced_scorecard_2021}
+``Instrument Design of Small Industry Performance Measurement in Semarang City with Balanced Scorecard Concept,'' 2021.
+
+\bibitem{capacity_ml_2024}
+``Predictive Model for IT Capacity Management Based on Machine Learning,'' 2024.
+
+\bibitem{itil_cobit_2023}
+``Integrating ITIL and COBIT 2019 for Robust IT Governance,'' 2023.
+
+\bibitem{rpa_business_2023}
+``Robotic Processes Automation to Improve Business Process Automation,'' 2023.
+
+\bibitem{itil_fitsm_2025}
+``Strategy Improvement for IT Governance in Library Services Using an Adaptation of ITIL 4 and FitSM: A COBIT 2019 Perspective,'' 2025.
+
+\bibitem{cloud_incident_2025a}
+``Transforming Incident Management: Leveraging Artificial Intelligence for Enhanced Detection, Classification, and Comprehensive Cloud Incident Detection,'' 2025.
+
+\bibitem{cloud_incident_2025b}
+``An Intelligent Framework for Timely, Accurate, and Comprehensive Cloud Incident Detection,'' 2025.
+
+\end{thebibliography}
+
+\end{document}
